@@ -1,3 +1,2 @@
 # pythonOpencv
-use Python  and Opencv  to recongnize the pictures
-
+use Python  and Opencv  to recongnize the picture
