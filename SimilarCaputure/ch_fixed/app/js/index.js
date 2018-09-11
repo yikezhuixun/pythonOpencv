@@ -359,16 +359,16 @@
          item.style.backgroundImage = `url('asset/icon/usb/usb_${list[i]}.png')`;
          container.appendChild(item);
          usbdevice.style.height = "0px";
-         // velocity.animate(usbdevice, "stop");
-         /*velocity.animate(usbdevice, {
+         velocity.animate(usbdevice, "stop");
+         velocity.animate(usbdevice, {
              height: 280 * zoom
          }, {
              duration: 200,
              complete: () => {
                  switchRow("#usbdevice");
-                 //  moveFloatFrame(true);
+                 moveFloatFrame();
              }
-         });*/
+         });
 
          usbdevice.style.height = 280 * zoom+"px";
          switchRow("#usbdevice");
@@ -429,7 +429,7 @@
 
  function processDateTime() {
      var date = new Date();
-     document.getElementById("date").innerHTML = (date.getMonth() + 1) + "." + date.getDay() + "." + date.getFullYear();
+     document.getElementById("date").innerHTML = date.getDate()+"."+(date.getMonth() + 1)+"." + date.getFullYear();
      var timer = setInterval(function () {
          var d = new Date();
          document.getElementById("time").innerHTML = d.getHours() + ":" + zerofill(d.getMinutes()); // + ":" + zerofill(d.getSeconds());
