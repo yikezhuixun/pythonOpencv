@@ -1,0 +1,36 @@
+#usbdevice {
+    overflow: hidden;
+    margin-top: 20px*@zoom;
+    display: none;
+    .title {
+        font-size: convert(28pt*@zoom, "px");
+        color: #f1f1f1;
+        height: 30px*@zoom;
+        line-height: 30px*@zoom;
+        margin-left: 40px*@zoom;
+    }
+    .content {
+        overflow: hidden;
+        height: 280px*@zoom;
+        margin-top: 20px*@zoom;
+        position: relative;
+        .content-container {
+            transform: translateX(40px*@zoom);
+            .item {
+                display: inline-block;
+                width: 250px*@zoom;
+                height: 140px*@zoom;
+                text-align: center;
+                background: #0890b9;
+                background-size: contain;
+                &+.item {
+                    margin-left: 15px*@zoom;
+                }
+                &:focus {
+                    .transition;
+                    .focusglow;
+                }
+            }
+        }
+    }
+}

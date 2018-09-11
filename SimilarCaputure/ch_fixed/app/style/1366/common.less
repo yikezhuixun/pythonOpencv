@@ -1,0 +1,216 @@
+@app-bg: rgba(102, 102, 102, .9);
+@submenu-bg: rgba(159, 159, 159, .9);
+@animateDuration: 150ms;
+@zoom: 1366/1920;
+@font-face {
+    font-family: 'DejaVu Sans';
+    src: url('../../resource/font/DejaVuSans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body,
+html {
+    font-family: 'DejaVu Sans';
+    font-size: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    -webkit-user-select: none;
+    user-select: none;
+    width: 1366px;
+    height: 768px;
+}
+
+input {
+    font: inherit;
+    margin: 0;
+    padding: 0
+}
+
+p {
+    border: 0;
+    margin: 0;
+    outline: none;
+    padding: 0
+}
+
+.strong {
+    font-weight: bold;
+}
+
+.focused,
+:focus {
+    outline: 0 solid
+}
+
+.hidden {
+    display: none !important;
+    pointer-events: none
+}
+
+.invisible {
+    visibility: hidden
+}
+
+.device-plugin {
+    height: 0;
+    margin: 0;
+    position: absolute;
+    visibility: hidden;
+    width: 0
+}
+
+.transition {
+    transition-duration: 500ms;
+    transition-property: transform;
+    transition-timing-function: linear;
+}
+
+.transition-fast {
+    transition-duration: 30ms;
+    transition-property: transform;
+    transition-timing-function: linear;
+}
+
+.content-container-v {
+    .transition-fast
+}
+
+.focusglow {
+    //border: 2px solid rgb(255, 255, 255);
+    //box-shadow: 0px 0px 10px 2px #fff;
+}
+
+#floatframe {
+    position: fixed;
+    z-index: 100000;
+    left: -35px*@zoom;
+    top: 445px*@zoom;
+    width: 250px*@zoom;
+    height: 140px*@zoom;
+    border: 3px solid white;
+    box-shadow: 0px 0px 30px*@zoom 5px white;
+    pointer-events: none;
+    animation-name: blueblur;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    visibility: hidden;
+}
+
+#leanback {
+    width: 1366px;
+    height: 768px;
+    overflow: hidden;
+}
+
+#app-markup {
+    background-size: 100% 100%;
+    position: absolute;
+    width: 1366px;
+    height: 768px;
+    overflow: hidden;
+}
+
+#background {
+    bottom: 0;
+    image-rendering: pixelated;
+    left: 0;
+    position: fixed;
+    overflow: hidden;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#arrawtip {
+    display: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 20px*@zoom;
+    height: 20px*@zoom;
+    position: fixed;
+    left: 951px*@zoom;
+    top: 1055px*@zoom;
+    z-index: 9999;
+    &.up {
+        background-image: url('../../resource/ic_home_arrow_top.png');
+    }
+    &.down {
+        background-image: url('../../resource/ic_home_arrow_bottom.png');
+    }
+}
+
+@keyframes blueblur {
+    from {
+        border-color: #fff;
+        border-width: 3px;
+        box-shadow: 0 0 20px 5px #fff;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    50% {
+        border-color: rgb(0, 87, 250);
+        border-width: 3px;
+        box-shadow: 0 0 20px 5px rgb(0, 87, 250);
+        background-color: rgba(0, 87, 250, 0.1);
+    }
+    to {
+        border-color: #fff;
+        border-width: 3px;
+        box-shadow: 0 0 20px 5px #fff;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+@keyframes colorful {
+    from {
+        border-color: #f00;
+        border-width: 5px;
+        box-shadow: 0 0 50px 10px #f00;
+        background: rgba(255, 0, 0, 0.2)
+    }
+    10% {
+        border-color: #f80;
+        border-width: 5px;
+        box-shadow: 0 0 50px 10px #f80;
+        background: rgba(255, 120, 0, 0.2);
+    }
+    25% {
+        border-color: #ff0;
+        border-width: 5px;
+        box-shadow: 0 0 50px 10px #ff0;
+        background: rgba(255, 255, 0, 0.2);
+    }
+    40% {
+        border-color: rgb(171, 253, 48);
+        border-width: 5px;
+        box-shadow: 0 0 50px 10px rgb(171, 253, 48);
+        background: rgba(171, 253, 48, 0.2);
+    }
+    55% {
+        border-color: #080;
+        border-width: 5px;
+        box-shadow: 0 0 50px 10px #080;
+        background: rgba(0, 120, 0, 0.2);
+    }
+    70% {
+        border-color: #00f;
+        border-width: 5px;
+        box-shadow: 0 0 50px 10px #00f;
+        background: rgba(0, 0, 255, 0.2);
+    }
+    85% {
+        border-color: #909;
+        border-width: 5px;
+        box-shadow: 0 0 50px 10px #909;
+        background: rgba(130, 0, 130, 0.2);
+    }
+    to {
+        border-color: #f00;
+        border-width: 5px;
+        box-shadow: 0 0 50px 10px #f00;
+        background: rgba(255, 0, 0, 0.2);
+    }
+}

@@ -1,0 +1,50 @@
+{
+    "config": {
+        "appPageSize": 6,
+        "enbaleSound": 0
+    },
+    "apps": [{
+            "name": "Netflix"
+        }, {
+            "name": "Cobalt YTTV"
+        }, {
+            "name": "Facebook"
+        }, {
+            "name": "QJY Twitter_widget"
+        },
+        {
+            "name": "Yahoo Weather"
+        }, {
+            "name": "QJY NETRANGE"
+        },
+        {
+            "name": "QJY GLOBOPLAY"
+        }, {
+            "name": "Youtube Kids"
+        }, {
+            "name": "Toon Goggles"
+        }, {
+            "name": "Screen Cast",
+            "type": "nativeui",
+            "action": "open_miracast: default"
+        }, {
+            "name": "Sraf OpenBrowser"
+        }
+    ],
+    "source": [{
+        "name": "atv"
+    }, {
+        "name": "dtv"
+    }, {
+        "name": "hdmi 1"
+    }, {
+        "name": "hdmi 2"
+    }, {
+        "name": "hdmi 3"
+    }, {
+        "name": "pc"
+    }, {
+        "name": "dvbs"
+    }]
+
+}
